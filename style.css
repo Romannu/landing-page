@@ -8,6 +8,120 @@
     font-style: normal;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+* ::after,
+* ::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'wotfardregular';
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+.background {
+    /* I have to specify the width, because I have the body with
+    align-items: center, which stops the default behavior that is
+    'stretch', which makes it as wide as the content inside.*/
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1F2937;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 0px 60px;
+    gap: 80px;
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0px 40px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container .logo {
+    font-size: 24px;
+    color: #F9FAF8;
+    font-weight: 900;
+}
+
+.introduction-container {
+    display: flex;
+    gap: 40px;
+}
+
+.introduction-container .content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-container h1 {
+    color: #F9FAF8;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.content-container p {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+.content-container button {
+    font-weight: bold;
+
+    background-color: #3882F6;
+    color: #E5E7EB;
+
+    border: none;
+    border-radius: 5px;
+
+    height: 30px;
+    width: 100px;
+}
+
+.img-container {
+    flex: 0 0 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #E5E7EB;
 }
